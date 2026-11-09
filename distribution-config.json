@@ -1,0 +1,62 @@
+{
+  "CallerReference": "csce412aadiujoshi-shop-1794028860",
+  "Comment": "CSCE 412 Project 5 static site",
+  "Enabled": true,
+  "DefaultRootObject": "index.html",
+  "Origins": {
+    "Quantity": 1,
+    "Items": [
+      {
+        "Id": "private-s3-origin",
+        "DomainName": "csce412aadiujoshi-shop-site.s3.us-east-1.amazonaws.com",
+        "OriginAccessControlId": "E2U7JZJLHSXK0E",
+        "S3OriginConfig": {
+          "OriginAccessIdentity": ""
+        }
+      }
+    ]
+  },
+  "DefaultCacheBehavior": {
+    "TargetOriginId": "private-s3-origin",
+    "ViewerProtocolPolicy": "redirect-to-https",
+    "AllowedMethods": {
+      "Quantity": 2,
+      "Items": [
+        "GET",
+        "HEAD"
+      ],
+      "CachedMethods": {
+        "Quantity": 2,
+        "Items": [
+          "GET",
+          "HEAD"
+        ]
+      }
+    },
+    "Compress": true,
+    "ForwardedValues": {
+      "QueryString": false,
+      "Cookies": {
+        "Forward": "none"
+      }
+    },
+    "MinTTL": 0,
+    "DefaultTTL": 86400,
+    "MaxTTL": 31536000,
+    "ResponseHeadersPolicyId": "67f7725c-6f97-4210-82d7-5512b31e9d03"
+  },
+  "CustomErrorResponses": {
+    "Quantity": 0
+  },
+  "PriceClass": "PriceClass_100",
+  "ViewerCertificate": {
+    "CloudFrontDefaultCertificate": true
+  },
+  "Restrictions": {
+    "GeoRestriction": {
+      "RestrictionType": "none",
+      "Quantity": 0
+    }
+  },
+  "HttpVersion": "http2"
+}

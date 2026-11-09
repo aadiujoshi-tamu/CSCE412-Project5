@@ -1,0 +1,10 @@
+{
+  "domain": "csce412aadiujoshi.shop",
+  "bucket": "csce412aadiujoshi-shop-site",
+  "region": "us-east-1",
+  "zone_id": "Z07299501ILLQ1TA54F85",
+  "distribution_id": "E17P4IRE3QA351",
+  "cloudfront_domain": "d3bs1pu87rxduw.cloudfront.net",
+  "site_dir": "site",
+  "bedrock_model_id": "amazon.nova-micro-v1:0"
+}

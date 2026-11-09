@@ -1,0 +1,7 @@
+{
+  "Name": "project5-s3-oac",
+  "Description": "CloudFront access to the private CSCE 412 Project 5 S3 bucket",
+  "SigningProtocol": "sigv4",
+  "SigningBehavior": "always",
+  "OriginAccessControlOriginType": "s3"
+}

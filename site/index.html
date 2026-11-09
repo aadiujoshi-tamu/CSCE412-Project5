@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1020">
+  <meta name="description" content="Aadi Joshi's CSCE 412 Project 5: a static website delivered securely with Amazon S3 and CloudFront.">
+  <title>Project 05 — Aadi Joshi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="page-shell">
+    <header class="topbar">
+      <a class="wordmark" href="#top" aria-label="Aadi Joshi home"><span class="wordmark-mark">AJ</span><span>AADI JOSHI</span></a>
+      <nav aria-label="Main navigation">
+        <a href="services.html">Services</a>
+        <a href="approach.html">Approach</a>
+        <a href="team.html">Team</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <a class="top-link" href="approach.html"><span class="status-dot"></span> CSCE 412 <span class="arrow">↗</span></a>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-grid"></div>
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> CLOUD SYSTEMS · PROJECT 05</p>
+          <h1 id="hero-title">A small site.<br><span class="serif-accent">A real</span> cloud edge.</h1>
+          <p class="hero-intro">A static website delivered through Amazon CloudFront, backed by a private S3 origin, and secured with HTTPS.</p>
+          <a class="button" href="#overview">Explore the build <span>↓</span></a>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <div class="orbit orbit-three"></div>
+          <div class="core"><span>EDGE</span><strong>05</strong><small>GLOBAL DELIVERY</small></div>
+          <span class="node node-a">S3</span><span class="node node-b">TLS</span><span class="node node-c">DNS</span>
+          <span class="art-coordinate">30°37′ N<br>96°20′ W</span>
+        </div>
+        <div class="hero-foot"><span>01 / STATIC WEB</span><span>BUILT FOR THE OPEN WEB</span><span>SCROLL TO EXPLORE ↓</span></div>
+      </section>
+
+      <section id="overview" class="intro-section section-pad">
+        <div class="section-label"><span>01</span><span>THE IDEA</span></div>
+        <div class="intro-content">
+          <p class="kicker">A practical cloud deployment</p>
+          <h2>Make the simple<br>things <span class="serif-accent">work beautifully.</span></h2>
+          <div class="intro-bottom">
+            <p>This project takes a lightweight, responsive website and gives it a production-style path to the browser: static files in object storage, a global delivery layer, and a custom domain with encrypted connections.</p>
+            <div class="intro-index"><span>CSCE</span><strong>412</strong><span>PROJECT 05</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="architecture" class="architecture-section section-pad">
+        <div class="section-label"><span>02</span><span>THE ARCHITECTURE</span></div>
+        <div class="architecture-main">
+          <div class="architecture-heading"><p class="kicker">From source to browser</p><h2>One request.<br><span class="serif-accent">A clear path.</span></h2></div>
+          <div class="flow" aria-label="Request flow: visitor to Route 53 to CloudFront to private S3 bucket">
+            <div class="flow-step"><span class="flow-number">01</span><span class="flow-icon visitor-icon">↗</span><strong>Visitor</strong><small>HTTPS request</small></div>
+            <span class="flow-connector"><i></i></span>
+            <div class="flow-step"><span class="flow-number">02</span><span class="flow-icon dns-icon">◎</span><strong>Route 53</strong><small>Custom domain</small></div>
+            <span class="flow-connector"><i></i></span>
+            <div class="flow-step featured"><span class="flow-number">03</span><span class="flow-icon cf-icon">✳</span><strong>CloudFront</strong><small>HTTPS · edge cache</small></div>
+            <span class="flow-connector"><i></i></span>
+            <div class="flow-step"><span class="flow-number">04</span><span class="flow-icon s3-icon">▤</span><strong>Amazon S3</strong><small>Private origin · OAC</small></div>
+          </div>
+          <div class="architecture-note"><span class="note-mark">↳</span><p>Origin Access Control keeps the bucket private. CloudFront signs origin requests, so visitors receive the site without direct public access to the stored files.</p><span class="note-tag">PRIVATE BY DESIGN</span></div>
+        </div>
+      </section>
+
+      <section class="principles-section section-pad">
+        <div class="section-label"><span>03</span><span>THE BUILDING BLOCKS</span></div>
+        <div class="principles-grid">
+          <article class="principle"><span class="principle-index">A / DELIVERY</span><div class="principle-symbol symbol-cloud">✳</div><h3>Close to<br>the visitor.</h3><p>CloudFront caches static files at edge locations for a fast, consistent delivery path around the world.</p><span class="principle-foot">AMAZON CLOUDFRONT <b>↗</b></span></article>
+          <article class="principle"><span class="principle-index">B / STORAGE</span><div class="principle-symbol symbol-lock">⌑</div><h3>Private<br>at the source.</h3><p>Amazon S3 stores the built site. Public access is blocked; only the intended CloudFront distribution can read it.</p><span class="principle-foot">AMAZON S3 + OAC <b>↗</b></span></article>
+          <article class="principle"><span class="principle-index">C / TRANSPORT</span><div class="principle-symbol symbol-tls">↗</div><h3>Secure<br>by default.</h3><p>HTTPS protects the connection, while HTTP requests are redirected to the encrypted version of the site.</p><span class="principle-foot">ACM CERTIFICATE <b>↗</b></span></article>
+        </div>
+      </section>
+
+      <section id="delivery" class="delivery-section section-pad">
+        <div class="delivery-orb" aria-hidden="true"><div class="orb-ring ring-a"></div><div class="orb-ring ring-b"></div><div class="orb-dot"></div><span>AVAILABLE<br>WHERE YOU ARE</span></div>
+        <div class="delivery-copy"><div class="section-label"><span>04</span><span>THE RESULT</span></div><p class="kicker">Designed for the everyday web</p><h2>Fast to load.<br><span class="serif-accent">Easy to reach.</span></h2><p class="delivery-text">A lean static frontend means fewer moving parts between a visitor and the page. The custom domain keeps the URL memorable; the edge handles delivery.</p><a class="text-link" href="#top">Back to the beginning <span>↑</span></a></div>
+      </section>
+
+      <section class="endnote section-pad"><span class="endnote-label">CSCE 412 / PROJECT 05</span><p>Built with care.<br><span class="serif-accent">Delivered from the edge.</span></p><span class="endnote-mark">AJ<span>✳</span></span></section>
+    </main>
+
+    <footer class="footer"><a class="wordmark" href="#top"><span class="wordmark-mark">AJ</span><span>AADI JOSHI</span></a><span>STATIC SITE · AWS · HTTPS</span><a href="#top">BACK TO TOP ↑</a></footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

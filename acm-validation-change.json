@@ -1,0 +1,17 @@
+{
+  "Changes": [
+    {
+      "Action": "UPSERT",
+      "ResourceRecordSet": {
+        "Name": "_56806701bee7b4a9e7ccfbccc6e17a5b.csce412aadiujoshi.shop.",
+        "Type": "CNAME",
+        "TTL": 300,
+        "ResourceRecords": [
+          {
+            "Value": "_22bc405c57b3a7417eb2745595ef7d1b.wzccmgtwzk.acm-validations.aws."
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+.env
+.venv/
+__pycache__/
+*.py[cod]
+logs/*.jsonl
+logs/*.log
+logs/
+project5-agent-logs/*.log
+project5-agent-logs/*.json
+project5-agent-logs/*.zip
+site/.DS_Store
+ignore/
